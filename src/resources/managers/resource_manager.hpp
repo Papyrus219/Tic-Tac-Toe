@@ -18,13 +18,13 @@ class Resource_manager: public Resource_write_getter, public Resource_read_gette
 public:
     Resource_manager();
 
-    Player & Get_player() override {return this->player;};
-    Enemy & Get_enemy() override {return this->enemy;};
-    Board & Get_board() override {return this->board;};
+    Player & Get_player() noexcept override {return this->player;};
+    Enemy & Get_enemy() noexcept override {return this->enemy;};
+    Board & Get_board() noexcept override {return this->board;};
 
-    const Player & Get_player() const override {return this->player;};
-    const Enemy & Get_enemy() const override {return this->enemy;};
-    const Board & Get_board() const override {return this->board;};
+    const Player & Get_player() const noexcept override {return this->player;};
+    const Enemy & Get_enemy() const noexcept override {return this->enemy;};
+    const Board & Get_board() const noexcept override {return this->board;};
 
 private:
     Player player{};

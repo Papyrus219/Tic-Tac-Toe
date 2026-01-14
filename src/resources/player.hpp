@@ -18,7 +18,7 @@ public:
 
     Field Get_symbol() const noexcept {return this->assigned_symbol;};
 
-private:
+protected:
     Board *assigned_board{};
     Field assigned_symbol{};
 };

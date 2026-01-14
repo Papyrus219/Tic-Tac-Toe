@@ -18,7 +18,8 @@ project(tic_tac_toe)
 set(Resource_src src/resources/board.cpp
 src/resources/enemy.cpp
 src/resources/player.cpp
-src/resources/resource_manager.cpp)
+src/resources/manager/resource_manager.cpp
+)
 
 add_executable(${PROJECT_NAME} ${Resource_src} src/main.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE SFML::Graphics SFML::Audio)

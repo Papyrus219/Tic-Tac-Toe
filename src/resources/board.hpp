@@ -18,8 +18,8 @@ public:
     bool Change_field(Field type, unsigned int row, unsigned int column);
     void Reset() noexcept;
 
-    std::span< const std::array<Field, globals::COLUMNS_AMOUNT> > Get_all_fields() const {return fields;};
-    Field Get_field(unsigned int row, unsigned int column) const {return fields[row][column];};
+    std::span< const std::array<Field, globals::COLUMNS_AMOUNT> > Get_all_fields() const noexcept {return fields;};
+    Field Get_field(unsigned int row, unsigned int column) const noexcept {return fields[row][column];};
 
 private:
     std::array< std::array<Field, globals::COLUMNS_AMOUNT>, globals::ROWS_AMOUNT > fields{};

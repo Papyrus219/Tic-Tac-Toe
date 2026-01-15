@@ -18,10 +18,17 @@ project(tic_tac_toe)
 set(Resource_src src/resources/board.cpp
 src/resources/enemy.cpp
 src/resources/player.cpp
-src/resources/manager/resource_manager.cpp
+src/resources/managers/resource_manager.cpp
+src/resources/managers/texture_manager.cpp
 )
 
-add_executable(${PROJECT_NAME} ${Resource_src} src/main.cpp)
+set(Logic_src src/logic/logic_manager.cpp
+)
+
+set(Graphic_src src/graphics//graphic_manager.cpp
+)
+
+add_executable(${PROJECT_NAME} ${Resource_src} ${Graphic_src} ${Logic_src} src/game.cpp src/main.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE SFML::Graphics SFML::Audio)
 
 if (MSVC)

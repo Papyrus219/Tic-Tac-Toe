@@ -16,6 +16,10 @@ public:
     Graphic_manager(Resource_manager& resources_, Texture_manager& textures_);
 
     void Render();
+
+    sf::RenderWindow& Get_window() {return this->window;};
+    const sf::RenderWindow& Get_window() const {return this->window;};
+
 private:
     void Render_board();
     void Render_ui();
